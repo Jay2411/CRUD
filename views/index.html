@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <a href="./category.html">Category</a>
+    <br><hr>
+    <a href="./edit.html">Edit</a>
+  </div>
+  <br><hr><br>
+  <form action="/product" method="POST" id="productForm">
+    <div class="control-group">
+      <input type="text" name="productId" class="form-control" id="productId" placeholder="Product Id" required />
+    </div>
+    <br>
+    <div class="control-group">
+      <input type="text" name="productName" class="form-control" id="productName" placeholder="Product Name" required />
+    </div>
+    <br>
+    <div class="control-group">
+      <input type="number" name="qtyPerUnit" class="form-control" id="qtyPerUnit" placeholder="Quantity Of The Product"
+        required />
+    </div>
+    <br>
+    <div class="control-group">
+      <input type="number" name="unitPrice" class="form-control" id="unitPrice" placeholder="Unit Price of the product"
+        required />
+    </div>
+    <br>
+    <div class="control-group">
+      <input type="number" name="unitInStock" class="form-control" id="unitInStock" placeholder="Unit In Stock"
+        required />
+    </div>
+    <br>
+    <div class="control-group">
+      <p>Discontinued</p>
+      <label for="yes">Yes</label>
+      <input type="radio" name="discontinued" class="form-control" value="yes" id="discontinued" checked />
+      <label for="no">NO</label>
+      <input type="radio" name="discontinued" class="form-control" value="no" id="discontinued" />
+    </div>
+    <br>
+    <div class="control-group">
+      <input type="number" name="categoryId" class="form-control" id="categoryId" placeholder="Category Id" required />
+    </div>
+    <br>
+    <br>
+    <div>
+      <button class="btn" type="submit" value="Product" id="sendMessageButton">Submit</button>
+    </div>
+  </form>
+  <br><hr><br>
+  <form action="/delete" method="POST">
+    <div class="control-group">
+      <input type="text" name="id" class="form-control" id="id" placeholder="your id" required>
+    </div>
+    <br>
+    <div>
+      <button class="btn" type="submit" value="Delete" id="sendMessageButton">Delete</button>
+    </div>
+  </form>
+  <br><hr><br>
+  <form action="/find" method="GET">
+    <button type="submit" value="Find">Find</button>
+  </form>
+</body>
+
+</html>
